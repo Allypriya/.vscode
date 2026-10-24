@@ -1,0 +1,42 @@
+{
+	"name": "gcc-md",
+	"displayName": "GCC Machine Description",
+	"repository": "https://github.com/Phantom1003/vscode-gcc-md.git",
+	"description": "",
+	"publisher": "phantom",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "gcc-md",
+				"aliases": [
+					"gcc-md",
+					"gcc-md"
+				],
+				"extensions": [
+					".md"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "gcc-md",
+				"scopeName": "source.gcc-md",
+				"path": "./syntaxes/gcc-md.tmLanguage.json"
+			}
+		]
+	},
+	"devDependencies": {},
+	"__metadata": {
+		"installedTimestamp": 1788838415579,
+		"targetPlatform": "undefined",
+		"size": 244878
+	}
+}
