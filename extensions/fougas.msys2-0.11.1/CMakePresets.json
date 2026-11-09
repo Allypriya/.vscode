@@ -1,0 +1,180 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "displayName": "MinGW32",
+      "name": "mingw32",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/mingw32",
+      "environment": {
+        "PATH": "C:/msys64/mingw32/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/msys64/mingw32/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/mingw32/bin/g++.exe",
+        "CMAKE_Fortran_COMPILER": "C:/msys64/mingw32/bin/gfortran.exe",
+        "MPI_C_COMPILER": "C:/msys64/mingw32/bin/mpicc.exe",
+        "MPI_CXX_COMPILER": "C:/msys64/mingw32/bin/mpicxx.exe",
+        "MPI_Fortran_COMPILER": "C:/msys64/mingw32/bin/mpifort.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/mingw32/bin/ninja.exe"
+      }
+    },
+    {
+      "displayName": "MinGW64",
+      "name": "mingw64",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/mingw64",
+      "environment": {
+        "PATH": "C:/msys64/mingw64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/msys64/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/mingw64/bin/g++.exe",
+        "CMAKE_Fortran_COMPILER": "C:/msys64/mingw64/bin/gfortran.exe",
+        "MPI_C_COMPILER": "C:/msys64/mingw64/bin/mpicc.exe",
+        "MPI_CXX_COMPILER": "C:/msys64/mingw64/bin/mpicxx.exe",
+        "MPI_Fortran_COMPILER": "C:/msys64/mingw64/bin/mpifort.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/mingw64/bin/ninja.exe"
+      }
+    },
+    {
+      "displayName": "UCRT64",
+      "name": "ucrt64",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/ucrt64",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {}
+    },
+    {
+      "displayName": "Clang32",
+      "name": "clang32",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/clang32",
+      "environment": {
+        "PATH": "C:/msys64/clang32/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/msys64/clang32/bin/clang.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/clang32/bin/clang++.exe",
+        "CMAKE_Fortran_COMPILER": "C:/msys64/clang32/bin/flang.exe",
+        "MPI_C_COMPILER": "C:/msys64/clang32/bin/mpicc.exe",
+        "MPI_CXX_COMPILER": "C:/msys64/clang32/bin/mpicxx.exe",
+        "MPI_Fortran_COMPILER": "C:/msys64/clang32/bin/mpifort.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/clang32/bin/ninja.exe"
+      }
+    },
+    {
+      "displayName": "Clang64",
+      "name": "clang64",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/clang64",
+      "environment": {
+        "PATH": "C:/msys64/clang64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {}
+    },
+    {
+      "displayName": "MSYS2",
+      "name": "msys2",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/msys2",
+      "environment": {
+        "PATH": "C:/msys64/usr/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "C:/msys64/usr/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/msys64/usr/bin/g++.exe",
+        "CMAKE_Fortran_COMPILER": "C:/msys64/usr/bin/gfortran.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/usr/bin/ninja.exe"
+      }
+    },
+    {
+      "displayName": "Cygwin32",
+      "name": "cygwin32",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/cygwin32",
+      "environment": {
+        "PATH": "c:/cygwin/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "c:/cygwin/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "c:/cygwin/bin/g++.exe",
+        "CMAKE_Fortran_COMPILER": "c:/cygwin/bin/gfortran.exe",
+        "CMAKE_MAKE_PROGRAM": "c:/cygwin/bin/ninja.exe"
+      }
+    },
+    {
+      "displayName": "Cygwin64",
+      "name": "cygwin64",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/cygwin64",
+      "environment": {
+        "PATH": "c:/cygwin64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "c:/cygwin64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "c:/cygwin64/bin/g++.exe",
+        "CMAKE_Fortran_COMPILER": "c:/cygwin64/bin/gfortran.exe",
+        "CMAKE_MAKE_PROGRAM": "c:/cygwin64/bin/ninja.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "displayName": "MinGW32",
+      "name": "mingw32",
+      "configurePreset": "mingw32"
+    },
+    {
+      "displayName": "MinGW64",
+      "name": "mingw64",
+      "configurePreset": "mingw64"
+    },
+    {
+      "displayName": "UCRT64",
+      "name": "ucrt64",
+      "configurePreset": "ucrt64"
+    },
+    {
+      "displayName": "Clang32",
+      "name": "clang32",
+      "configurePreset": "clang32"
+    },
+    {
+      "displayName": "Clang64",
+      "name": "clang64",
+      "configurePreset": "clang64"
+    },
+    {
+      "displayName": "MSYS2",
+      "name": "msys2",
+      "configurePreset": "msys2"
+    },
+    {
+      "displayName": "Cygwin32",
+      "name": "cygwin32",
+      "configurePreset": "cygwin32"
+    },
+    {
+      "displayName": "Cygwin64",
+      "name": "cygwin64",
+      "configurePreset": "cygwin64"
+    }
+  ],
+  "vendor": {
+    "fougas.msys2": {
+      "presets": [
+        "mingw32",
+        "mingw64",
+        "ucrt64",
+        "clang32",
+        "clang64",
+        "msys2",
+        "cygwin32",
+        "cygwin64"
+      ]
+    }
+  }
+}

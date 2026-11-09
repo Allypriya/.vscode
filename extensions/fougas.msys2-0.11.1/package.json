@@ -1,0 +1,163 @@
+{
+	"name": "msys2",
+	"displayName": "MSYS2/Cygwin/MinGW/Clang support",
+	"description": "VS Code extension to set and retrieve MSYS2/Cygwin/MinGW/Clang configuration",
+	"publisher": "fougas",
+	"author": {
+		"name": "Oleg A. Khlybov"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/okhlybov/vscode-msys2.git"
+	},
+	"homepage": "https://github.com/okhlybov/vscode-msys2",
+	"version": "0.11.1",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"keywords": [
+		"cmake",
+		"build",
+		"msys2",
+		"cygwin",
+		"mingw",
+		"clang",
+		"win32",
+		"windows"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "msys2.kits.inject.user",
+				"title": "Inject CMake Kits into User-Local Configuration",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.kits.remove.user",
+				"title": "Remove CMake Kits from User-Local Configuration",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.kits.inject.project",
+				"title": "Inject CMake Kits into the Project",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.kits.remove.project",
+				"title": "Remove CMake Kits from the Project",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.presets.inject.user",
+				"title": "Inject CMake Presets into User Presets File",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.presets.remove.user",
+				"title": "Remove CMake Presets from User Presets File",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.presets.inject.project",
+				"title": "Inject CMake Presets into Project Presets File",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.presets.remove.project",
+				"title": "Remove CMake Presets from Project Presets File",
+				"category": "MSYS2"
+			},
+			{
+				"command": "msys2.dashboard",
+				"title": "Open Dashboard",
+				"category": "MSYS2"
+			}
+		],
+		"configuration": {
+			"title": "MSYS2",
+			"properties": {
+				"msys2.root": {
+					"type": "string",
+					"default": "c:\\msys64",
+					"description": "Path to MSYS2 root directory"
+				},
+				"cygwin32.root": {
+					"type": "string",
+					"default": "c:\\cygwin",
+					"description": "Path to 32-bit Cygwin root directory"
+				},
+				"cygwin64.root": {
+					"type": "string",
+					"default": "c:\\cygwin64",
+					"description": "Path to 64-bit Cygwin root directory"
+				},
+				"mingw32.provider": {
+					"type": "string",
+					"enum": [
+						"msys2",
+						"cygwin32",
+						"cygwin64"
+					],
+					"default": "msys2",
+					"description": "32-bit MinGW location provider [msys2, cygwin32, cygwin64] if {mingw32.root} is not set explicitly"
+				},
+				"mingw32.root": {
+					"type": "string",
+					"default": null,
+					"description": "Path to 32-bit MinGW root directory; if not specified, it will be set according to {mingw32.provider} setting"
+				},
+				"mingw64.provider": {
+					"type": "string",
+					"enum": [
+						"msys2",
+						"cygwin32",
+						"cygwin64"
+					],
+					"default": "msys2",
+					"description": "64-bit MinGW location provider [msys2, cygwin32, cygwin64] if {mingw64.root} is not set explicitly"
+				},
+				"mingw64.root": {
+					"type": "string",
+					"default": null,
+					"description": "Path to 64-bit MinGW root directory; if not specified, it will be set according to {mingw64.provider} setting"
+				},
+				"msys2.presets.generator": {
+					"type": "string",
+					"enum": [
+						"Ninja",
+						"Ninja Multi-Config",
+						"MinGW Makefiles",
+						"Unix Makefiles"
+					],
+					"default": "Ninja",
+					"description": "CMake generator used by the injected CMake Presets [Ninja, Ninja Multi-Config, MinGW Makefiles, Unix Makefiles]"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"test": "node --test \"test/**/*.test.js\"",
+		"package": "vsce package"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.0.0",
+		"@types/node": "^24.0.0",
+		"@types/vscode": "^1.74.0",
+		"@vscode/vsce": "^3.0.0",
+		"eslint": "^9.0.0",
+		"globals": "^16.0.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1793336790997,
+		"targetPlatform": "undefined",
+		"size": 83027
+	}
+}
