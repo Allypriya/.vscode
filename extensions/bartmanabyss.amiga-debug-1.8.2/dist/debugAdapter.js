@@ -1,0 +1,1 @@
+"use strict";(()=>{var e={id:120,ids:[120]};e.modules={584:(e,s,i)=>{Object.defineProperty(s,"__esModule",{value:!0});const r=i(6176);r.AmigaDebugSession.run(r.AmigaDebugSession)}};var s=require("./extension.js");s.C(e);var i,r=(i=584,s(s.s=i));module.exports=r})();
